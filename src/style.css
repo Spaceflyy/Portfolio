@@ -1,3 +1,18 @@
-.hello {
-	color: red;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap");
+
+:root {
+	--headingFont: "Playfair Display", serif;
+	--mainFont: "Roboto", sans-serif;
+	--bgBlue: #0891b2;
+}
+* {
+	font-family: var(--mainFont);
+	box-sizing: border-box;
+}
+body,
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
 }
