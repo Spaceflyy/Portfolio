@@ -36,7 +36,7 @@ header {
 }
 
 .icon {
-	height: 32px;
+	height: 24px;
 	width: auto;
 }
 .aboutMeContainer {
@@ -71,6 +71,10 @@ p {
 	justify-items: end;
 }
 
+a {
+	text-decoration: none;
+}
+
 @media (max-width: 1000px) {
 	.introduction {
 		display: table;
@@ -79,9 +83,17 @@ p {
 	.aboutMeContainer {
 		display: block;
 		margin-top: 10%;
-
 		min-height: 500px;
 		text-align: justify;
+	}
+
+	.links {
+		display: table;
+		margin: 60px auto auto auto;
+	}
+
+	.icon {
+		margin: 0px 1rem 0px 0px;
 	}
 
 	.imgContainer {

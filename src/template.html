@@ -14,7 +14,14 @@
 		<header>
 			<section aria-labelledby="aboutMeTitle" class="introduction">
 				<div class="imgContainer">
-					<img src="<%=require('./imgs/pexels-ct-phat-19339851.jpg')%>" alt="" />
+					<img
+						srcset="
+							<%=require('./imgs/heroImgSmall.jpg')%>  500w,
+							<%=require('./imgs/heroImgMed.jpg')%>   1000w,
+							<%=require('./imgs/heroImgLarge.jpg')%> 1500w
+						"
+						sizes="(max-width:1000px) 50vw, 100vw"
+					/>
 				</div>
 				<div class="aboutMeContainer">
 					<h2 id="aboutMeTitle">About me</h2>
