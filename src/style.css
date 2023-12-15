@@ -22,7 +22,16 @@ header {
 	position: relative;
 	min-width: 100%;
 	min-height: 40%;
-	filter: drop-shadow(0 0 0.5rem rgb(56, 56, 56));
+}
+
+h1 {
+	font-size: 2.2rem;
+}
+
+h1,
+h2 {
+	font-family: var(--headingFont);
+	font-weight: 400;
 }
 
 .headerBg {
@@ -46,16 +55,26 @@ header {
 	min-height: 300px;
 	background-color: white;
 	padding: 1rem;
+	filter: drop-shadow(0 0 0.25rem rgb(56, 56, 56));
 }
 
-p {
-	flex: 1;
-}
 .imgContainer img {
 	height: 400px;
 	width: auto;
+	filter: drop-shadow(0 0 0.25rem rgb(56, 56, 56));
 }
-
+.imgContainer {
+	position: relative;
+}
+.imgContainer h1 {
+	color: white;
+	position: absolute;
+	z-index: 2;
+	top: 85%;
+	left: 50%;
+	width: max-content;
+	transform: translate(-50%, -50%);
+}
 .introduction {
 	display: flex;
 	justify-content: center;
@@ -75,7 +94,7 @@ a {
 	text-decoration: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
 	.introduction {
 		display: table;
 		margin: 0px auto;
@@ -98,6 +117,12 @@ a {
 
 	.imgContainer {
 		float: left;
+		z-index: 1;
 		translate: -20px -10px;
+	}
+
+	.imgContainer h1 {
+		top: 0;
+		left: 130%;
 	}
 }
