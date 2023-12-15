@@ -81,6 +81,18 @@ h2 {
 	align-items: center;
 	padding: 2rem;
 }
+main {
+	display: flex;
+
+	justify-content: center;
+}
+main .introduction {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	width: 80%;
+}
+
 .links {
 	display: grid;
 	grid-auto-flow: column;
@@ -90,8 +102,31 @@ h2 {
 	justify-items: end;
 }
 
-a {
-	text-decoration: none;
+.gridContainer {
+	display: grid;
+	gap: 5rem;
+	justify-items: center;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	width: 100%;
+}
+.project {
+	max-height: 25rem;
+	min-width: 400px;
+	background-color: white;
+	filter: drop-shadow(0 0.2rem 0.2rem rgb(56, 56, 56));
+}
+
+.headingContainer {
+	display: flex;
+	align-items: center;
+}
+.headingContainer h3 {
+	flex: 1;
+}
+
+.screenshot {
+	background-color: rgb(85, 180, 192);
+	height: 18rem;
 }
 
 @media (max-width: 800px) {
