@@ -90,7 +90,7 @@ main .introduction {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-	width: 80%;
+	width: 71%;
 }
 
 .links {
@@ -104,32 +104,51 @@ main .introduction {
 
 .gridContainer {
 	display: grid;
-	gap: 5rem;
+	gap: 2rem;
 	justify-items: center;
-	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 	width: 100%;
 }
 .project {
-	max-height: 25rem;
-	min-width: 400px;
+	display: flex;
+	max-width: 380px;
+	min-width: 100px;
+	flex-direction: column;
 	background-color: white;
 	filter: drop-shadow(0 0.2rem 0.2rem rgb(56, 56, 56));
 }
 
-.headingContainer {
+.headingContainer,
+.project p {
 	display: flex;
 	align-items: center;
+	padding: 0px 1rem 0px 1rem;
 }
+.headingContainer .links {
+	gap: 0.5rem;
+}
+
 .headingContainer h3 {
 	flex: 1;
 }
 
 .screenshot {
 	background-color: rgb(85, 180, 192);
-	height: 18rem;
+	min-height: 18rem;
 }
 
 @media (max-width: 800px) {
+	.gridContainer {
+		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+	}
+
+	.project {
+		min-width: 270px;
+	}
+
+	main .introduction {
+		width: 100%;
+	}
 	.introduction {
 		display: table;
 		margin: 0px auto;
