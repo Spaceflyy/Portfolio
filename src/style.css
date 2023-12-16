@@ -135,6 +135,11 @@ main .introduction {
 	background-color: rgb(85, 180, 192);
 	min-height: 18rem;
 }
+
+footer {
+	height: 35%;
+	background-color: var(--bgBlue);
+}
 @media (max-width: 995px) {
 	main .introduction {
 		width: 100%;
