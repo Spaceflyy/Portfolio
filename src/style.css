@@ -90,7 +90,7 @@ main .introduction {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
-	width: 71%;
+	width: 80%;
 }
 
 .links {
@@ -106,13 +106,12 @@ main .introduction {
 	display: grid;
 	gap: 2rem;
 	justify-items: center;
-	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 	width: 100%;
 }
 .project {
 	display: flex;
 	max-width: 380px;
-	min-width: 100px;
 	flex-direction: column;
 	background-color: white;
 	filter: drop-shadow(0 0.2rem 0.2rem rgb(56, 56, 56));
@@ -136,7 +135,11 @@ main .introduction {
 	background-color: rgb(85, 180, 192);
 	min-height: 18rem;
 }
-
+@media (max-width: 995px) {
+	main .introduction {
+		width: 100%;
+	}
+}
 @media (max-width: 800px) {
 	.gridContainer {
 		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
