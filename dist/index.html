@@ -296,14 +296,17 @@
 				</div>
 
 				<div class="imgContainer">
-					<img
-						srcset="
-							imgs/footerImgSmall.jpg  500w,
-							imgs/footerImgMed.jpg   1000w,
-							imgs/footerImgLarge.jpg 1500w
-						"
-						sizes="(max-width:1000px) 50vw, 100vw"
-					/>
+					<picture>
+						<source
+							media="(max-width:899px)"
+							srcset="imgs/footerImgMedCropped.jpg"
+						/>
+						<source
+							media="(max-width:900px)"
+							srcset="imgs/footerImgMed.jpg"
+						/>
+						<img src="imgs/footerImgMed.jpg" alt="" />
+					</picture>
 				</div>
 			</div>
 		</footer>

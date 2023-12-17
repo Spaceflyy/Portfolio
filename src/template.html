@@ -296,14 +296,17 @@
 				</div>
 
 				<div class="imgContainer">
-					<img
-						srcset="
-							<%=require('./imgs/footerImgSmall.jpg')%>  500w,
-							<%=require('./imgs/footerImgMed.jpg')%>   1000w,
-							<%=require('./imgs/footerImgLarge.jpg')%> 1500w
-						"
-						sizes="(max-width:1000px) 50vw, 100vw"
-					/>
+					<picture>
+						<source
+							media="(max-width:899px)"
+							srcset="<%=require('./imgs/footerImgMedCropped.jpg')%>"
+						/>
+						<source
+							media="(max-width:900px)"
+							srcset="<%=require('./imgs/footerImgMed.jpg')%>"
+						/>
+						<img src="<%=require('./imgs/footerImgMed.jpg')%>" alt="" />
+					</picture>
 				</div>
 			</div>
 		</footer>

@@ -64,6 +64,10 @@ h2 {
 	filter: drop-shadow(0 0 0.25rem rgb(56, 56, 56));
 }
 
+footer .imgContainer img {
+	height: 300px;
+}
+
 .imgContainer {
 	position: relative;
 }
@@ -85,16 +89,14 @@ footer .introduction {
 }
 footer .introduction {
 	justify-content: flex-start;
-	gap: 16.3rem;
+	gap: 2rem;
 	width: 80%;
-}
-footer .introduction .links {
-	align-content: s;
 }
 
 .contact {
 	display: flex;
 	flex-direction: column;
+	margin-right: auto;
 }
 main,
 footer {
@@ -169,7 +171,9 @@ a {
 	.gridContainer {
 		grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 	}
-
+	footer .introduction {
+		gap: 2rem;
+	}
 	.project {
 		min-width: 270px;
 	}
@@ -208,10 +212,6 @@ a {
 }
 
 @media (max-width: 500px) {
-	footer .introduction .imgContainer {
-		display: none;
-	}
-
 	footer .introduction .links {
 		grid-template-columns: 1fr 1fr 1fr;
 	}
