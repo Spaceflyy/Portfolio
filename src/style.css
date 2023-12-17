@@ -81,12 +81,17 @@ h2 {
 	align-items: center;
 	padding: 2rem;
 }
-main {
+main,
+footer {
 	display: flex;
-
 	justify-content: center;
 }
-main .introduction {
+footer {
+	color: white;
+	background-color: var(--bgBlue);
+}
+main .introduction,
+footer .introduction {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -136,10 +141,10 @@ main .introduction {
 	min-height: 18rem;
 }
 
-footer {
-	height: 35%;
-	background-color: var(--bgBlue);
+a {
+	text-decoration: none;
 }
+
 @media (max-width: 995px) {
 	main .introduction {
 		width: 100%;
