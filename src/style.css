@@ -164,8 +164,6 @@ footer {
 	.aboutMeContainer {
 		display: block;
 		margin-top: 10%;
-		min-height: 500px;
-		text-align: justify;
 	}
 
 	.links {
@@ -186,5 +184,27 @@ footer {
 	.imgContainer h1 {
 		top: 0;
 		left: 130%;
+	}
+}
+
+@media (max-width: 500px) {
+	.introduction {
+		display: flex;
+		flex-direction: column;
+		padding: 1rem;
+	}
+
+	.aboutMeContainer {
+		margin: 0;
+		height: max-content;
+		filter: none;
+	}
+	.imgContainer {
+		translate: 0px 0px;
+	}
+
+	.imgContainer h1 {
+		top: 85%;
+		left: 50%;
 	}
 }
