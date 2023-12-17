@@ -63,6 +63,7 @@ h2 {
 	width: auto;
 	filter: drop-shadow(0 0 0.25rem rgb(56, 56, 56));
 }
+
 .imgContainer {
 	position: relative;
 }
@@ -75,11 +76,25 @@ h2 {
 	width: max-content;
 	transform: translate(-50%, -50%);
 }
-.introduction {
+.introduction,
+footer .introduction {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 2rem;
+}
+footer .introduction {
+	justify-content: flex-start;
+	gap: 16.3rem;
+	width: 80%;
+}
+footer .introduction .links {
+	align-content: s;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
 }
 main,
 footer {
@@ -90,8 +105,7 @@ footer {
 	color: white;
 	background-color: var(--bgBlue);
 }
-main .introduction,
-footer .introduction {
+main .introduction {
 	display: flex;
 	flex-direction: column;
 	align-items: start;
@@ -105,6 +119,10 @@ footer .introduction {
 	grid-auto-columns: max-content;
 	gap: 1rem;
 	justify-items: end;
+}
+
+footer .introduction .links {
+	grid-template-columns: max-content;
 }
 
 .gridContainer {
@@ -127,9 +145,6 @@ footer .introduction {
 	display: flex;
 	align-items: center;
 	padding: 0px 1rem 0px 1rem;
-}
-.headingContainer .links {
-	gap: 0.5rem;
 }
 
 .headingContainer h3 {
@@ -193,6 +208,13 @@ a {
 }
 
 @media (max-width: 500px) {
+	footer .introduction .imgContainer {
+		display: none;
+	}
+
+	footer .introduction .links {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 	.introduction {
 		display: flex;
 		flex-direction: column;
